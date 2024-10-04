@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+ }
+
+ body {
+    background-color: rgb(244, 226, 248);
+    padding: 0;
+    margin: 0;
+ }
+
+.bordear {
+    border: 2px solid black;
+  }
+ 
+  .nthLastType {
+     color: cornflowerblue;
+     padding: 10px;
+     font-size: 30px;
+     display: flex;
+     justify-content: center;
+  }
+ 
+  .nthLastType:nth-last-of-type(1) {
+     background-color: lime;
+     padding: 5px;
+     font-size: 30px;
+     justify-content: center;
+   }
+ 
+   
+   .nthType {
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ /* Párrafos impares */
+ .nthType:nth-of-type(2n + 1) {
+    color: red;
+  }
+  
+  /* Párrafos pares */
+  .nthType:nth-of-type(2n) {
+    color: blue;
+  }
+  
+  /* Primer párrafo */
+  .nthType:nth-of-type(1) {
+    font-weight: bold;
+  }
+ 
+  .main2 :only-of-type {
+     color: red;
+   }
+ 
+  
+  
+  li li {
+     list-style-type: disc;
+   }
+   
+   li:only-child {
+     color: red;
+     list-style-type: square;
+   }
+ 
+   label {
+     display: block;
+     margin: 1px;
+     padding: 1px;
+   }
+   
+   .field {
+     margin: 1px;
+     padding: 1px;
+   }
+   
+   
+   .soyopcion:optional {
+     border-color: rebeccapurple;
+     border-width: 4px;
+   }
+   
+ 
+ li {
+     list-style: none;
+     margin-bottom: 1em;
+   }
+   
+   input {
+     border: 1px solid black;
+   }
+   
+   input:in-range {
+     background-color: rgb(0 255 0 / 25%);
+   }
+   
+   input:out-of-range {
+     background-color: rgb(255 0 0 / 25%);
+     border: 2px solid red;
+   }
+   
+   input:in-range + label::after {
+     content: "correcto.";
+   }
+   
+   input:out-of-range + label::after {
+     content: "fuera de rango!";
+   }
+   
+ 
+  .read-only {
+     min-width: 250px;
+   }
+  
+   .read-only:read-only {
+     background: cyan;
+   }
+   
+ .important {
+     color: red;
+   }
+ 
+  .read-write {
+     min-width: 250px;
+   }
+   input:-moz-read-write {
+     background: cyan;
+   }
+   .read-write:read-write {
+     background: cyan;
+   }
+ 
+ 
+   label {
+     display: block;
+     margin: 1px;
+     padding: 1px;
+   }
+   
+   .field {
+     margin: 1px;
+     padding: 1px;
+   }
+   
+   .soyRe:required {
+     border-color: #800000;
+     border-width: 3px;
+   }
+   
+   input:required:invalid {
+     border-color: #c00000;
+   }
+ 
+   /* Selecciona cualquier página de la derecha al imprimir */
+ @page :right {
+     margin: 2in 3in;
+   }
+ 
+   :root {
+     --main-color: hotpink;
+     --pane-padding: 5px 42px;
+     --text-size: 30px;
+     --bg-primario: #fefefe
+   }
+   
+   .soyRoot {
+     background-color: var(--main-color);
+     padding: var(--pane-padding);
+     font-size: var(--text-size);
+     color: var(--bg-primario);
+   }
+ 
+   
+   @scope (.light-scheme) {
+     :scope {
+       background-color: plum;
+     }
+   
+     a {
+       color: darkmagenta;
+     }
+   }
+   
+   @scope (.dark-scheme) {
+     :scope {
+       background-color: darkmagenta;
+       color: antiquewhite;
+     }
+   
+     a {
+       color: plum;
+     }
+   }
